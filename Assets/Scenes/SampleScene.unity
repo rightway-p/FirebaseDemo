@@ -1406,7 +1406,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1177663132}
         m_TargetAssemblyTypeName: FBManager, Assembly-CSharp
-        m_MethodName: LoadAllData
+        m_MethodName: SelectData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
