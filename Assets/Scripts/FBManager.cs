@@ -43,6 +43,27 @@ public class FBManager : MonoBehaviour
 
     void Start()
     {
+        // 루트 레퍼런스를 할당
         reference = FirebaseDatabase.DefaultInstance.RootReference;
+    }
+
+    /*
+        데이터 등록
+        - SetRawJsonValueAsync()
+        - JsonUtitiy.ToJson()    
+    */
+    public void InsertData()
+    {
+        // UI 입력값 
+        string _userName = userName.text;
+        int _gold        = int.Parse(gold.text); //String -> Int
+
+        // 데이터 저장을 위한 클래스 생성
+        User user = new User(_userName, _gold);
+
+        // JSON 포맷으로 포맷팅
+        string json = JsonUtility.ToJson(user);
+        // UserData 노드를 생성하고 하위에 데이터를 추가
+        reference.Child("UserData").Child(_userName).SetRawJsonValueAsync(json);
     }
 }
