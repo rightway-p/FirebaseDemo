@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "798905422799",
+    "project_id": "fir-demo-9af63",
+    "storage_bucket": "fir-demo-9af63.appspot.com",
+    "firebase_url": "https://fir-demo-9af63-default-rtdb.firebaseio.com/"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798905422799:android:0e3f7c14b75e871b7f38ba",
+        "android_client_info": {
+          "package_name": "com.methodgames.firebasedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798905422799-uflmtreeqhmfk0q6j1qd9gkleidpfj2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs_Sec9_zs-RiIxInwHh_RHK7rHM8SODE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798905422799-uflmtreeqhmfk0q6j1qd9gkleidpfj2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
