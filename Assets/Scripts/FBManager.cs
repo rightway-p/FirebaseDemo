@@ -119,6 +119,7 @@ public class FBManager : MonoBehaviour
         userNameQuery.ValueChanged += OnDataLoaded;
     }
 
+    // Query 결괏값을 출력하는 함수
     void OnDataLoaded(object sender, ValueChangedEventArgs args)
     {
         // 데이터 조회 스냅샷 정의
