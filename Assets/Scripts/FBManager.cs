@@ -103,4 +103,32 @@ public class FBManager : MonoBehaviour
         });
     }
 
+    /*
+        키 값으로 검색
+    */
+    public void SelectData()
+    {
+        // 검색할 UI 입력항목
+        string _userName = userName.text;
+        // 지역 레퍼런스 선언
+        DatabaseReference reference = FirebaseDatabase.DefaultInstance.GetReference("UserData");
+        // 정렬, 추출 Query
+        Query userNameQuery = reference.OrderByChild("userName").EqualTo(_userName);
+
+        // 검색
+        userNameQuery.ValueChanged += OnDataLoaded;
+    }
+
+    void OnDataLoaded(object sender, ValueChangedEventArgs args)
+    {
+        // 데이터 조회 스냅샷 정의
+        DataSnapshot snapshot = args.Snapshot;
+
+        foreach(var data in snapshot.Children)
+        {
+            IDictionary _data = (IDictionary) data.Value; 
+            Debug.Log($"결괏값={_data["userName"]}, {_data["gold"]}");
+        }
+    }
+
 }
