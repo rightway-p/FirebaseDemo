@@ -97,7 +97,7 @@ public class FBManager : MonoBehaviour
                     // DataSnapshot.Value 데이터를 접근
                     // {키}:{값} IDictionary 자료형 사용 (Key:Value)
                     IDictionary _data = (IDictionary) data.Value;
-                    Debug.Log($"");
+                    Debug.Log($"성명:{_data["userName"]} , 골드:{_data["gold"]}");
                 }
             }
         });
